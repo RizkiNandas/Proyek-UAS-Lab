@@ -11,3 +11,7 @@ type
     jeniskelamin:string;
     ideal:real;
     end;
+var
+    banyakorang:array [1..10] of orang;
+    jumlahorang,i:integer;
+    lanjut:char;
