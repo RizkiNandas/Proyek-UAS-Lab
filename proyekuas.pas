@@ -44,3 +44,12 @@ procedure hitungbmi(var data:orang);
             
         end;
     end;
+
+begin
+    repeat
+    clrscr;
+    writeln('Selamat Datang di Program Menjaga Berat Badan Ideal!!');
+    writeln('=====================================================');
+    writeln;
+    write('Masukkan Jumlah Orang Yang Ingin Dihitung: ');
+    readln(jumlahorang);
