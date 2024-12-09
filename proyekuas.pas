@@ -27,3 +27,20 @@ procedure hitungideal (var data:orang);
                 writeln('Jenis Kelamin Tidak Valid');
         end;
     end;
+procedure hitungbmi(var data:orang);
+    begin
+        with data do
+        begin
+            tinggibmi:=tinggi/100; 
+            bmi := berat / (tinggibmi * tinggibmi);
+            if bmi < 18.5 then
+                kategori:= 'Kekurangan Berat Badan'
+            else if (bmi >= 18.5) and (bmi <= 24.9) then
+                kategori:= 'Berat Badan Ideal'
+            else if (bmi >= 25) and (bmi <= 29.9) then
+                kategori:= 'Kelebihan Berat Badan'
+            else
+                kategori:= 'Kegemukan';
+            
+        end;
+    end;
