@@ -74,3 +74,19 @@ begin
 
             hitungbmi(banyakorang[i]);
             hitungideal(banyakorang[i]);
+        end;
+        clrscr;
+        writeln('HASIL PERHITUNGAN');
+        writeln('------------------');
+        writeln;
+        for i:=1 to jumlahorang do
+        begin
+            writeln('Orang ke ',i);
+            writeln('~~~~~~~~~~~~');
+            with banyakorang[i] do
+                begin
+                    writeln('Nama                       : ', nama);
+                    writeln('Body Mass Index (BMI)      ',  ': ', bmi:0:2);
+                    writeln('Kategori berat badan       : ', kategori);
+                    writeln('Berat Badan Ideal          : ', ideal:0:2);
+                    
