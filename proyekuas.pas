@@ -15,7 +15,7 @@ var
     banyakorang:array [1..10] of orang; //menyimpan hingga 10 pengguna 
     jumlahorang,i:integer;
     lanjut:char;
-procedure hitungideal (var data:orang);
+procedure hitungideal (var data:orang); //prosedur untuk menghitung berat badan ideal
     begin
         with data do
         begin
@@ -27,26 +27,26 @@ procedure hitungideal (var data:orang);
                 writeln('Jenis Kelamin Tidak Valid');
         end;
     end;
-procedure hitungbmi(var data:orang);
+procedure hitungbmi(var data:orang); //prosedur untuk menghitung bmi
     begin
         with data do
         begin
-            tinggibmi:=tinggi/100; 
+            tinggibmi:=tinggi/100; //mengubah cm ke m
             bmi := berat / (tinggibmi * tinggibmi);
-            if bmi < 18.5 then
+            if bmi < 18.5 then 
                 kategori:= 'Kekurangan Berat Badan'
             else if (bmi >= 18.5) and (bmi <= 24.9) then
                 kategori:= 'Berat Badan Ideal'
             else if (bmi >= 25) and (bmi <= 29.9) then
                 kategori:= 'Kelebihan Berat Badan'
             else
-                kategori:= 'Kegemukan';
+                kategori:= 'Kegemukan'; 
             
         end;
     end;
 
-begin
-    repeat
+begin //main program
+    repeat //perulangan jika pengguna ingin enghitung lagi
     clrscr;
     writeln('Selamat Datang di Program Menjaga Berat Badan Ideal!!');
     writeln('=====================================================');
@@ -64,16 +64,16 @@ begin
                 readln(berat);
                 write('Masukkan Tinggi Badan(Cm)          : ');
                 readln(tinggi);
-                repeat
+                repeat //perulangan jika jenis kelamin yang dimasukkan tidak sesuai
                 write('Masukkan Jenis Kelamin(Pria/Wanita): ');
                 readln(jeniskelamin);
-                if (jeniskelamin<>'pria') or (jeniskelamin<>'Pria') or (jeniskelamin<>'wanita') or (jeniskelamin<>'Wanita') then
-                    writeln('Jenis Kelamin Tidak Valid');
-                until (jeniskelamin = 'pria') or (jeniskelamin = 'Pria') or (jeniskelamin = 'wanita') or (jeniskelamin = 'Wanita');
+                if (jeniskelamin<>'pria') or (jeniskelamin<>'Pria') or (jeniskelamin<>'wanita') or (jeniskelamin<>'Wanita') then 
+                    writeln('Jenis Kelamin Tidak Valid'); //jika jenis kelamin yang dimasukkan tidk sesuai maka tidak valid
+                until (jeniskelamin = 'pria') or (jeniskelamin = 'Pria') or (jeniskelamin = 'wanita') or (jeniskelamin = 'Wanita'); //diulang sampai jenis kelamin yang dimasukkan sesuai
             end;
 
-            hitungbmi(banyakorang[i]);
-            hitungideal(banyakorang[i]);
+            hitungbmi(banyakorang[i]); //memanggil prosedur untuk menghitung bmi
+            hitungideal(banyakorang[i]); //memanggil prosedur untuk menghitung berat badan ideal
         end;
         clrscr;
         writeln('HASIL PERHITUNGAN');
@@ -90,7 +90,7 @@ begin
                     writeln('Kategori berat badan       : ', kategori);
                     writeln('Berat Badan Ideal          : ', ideal:0:2);
                     
-        if kategori = 'Kekurangan Berat Badan' then
+        if kategori = 'Kekurangan Berat Badan' then //memunculkan tips sesuai kategori bmi
                         begin
                             writeln('Berikut Ini adalah Tips Untuk Menaikkan Berat Badan.');
                             writeln('1. Konsumsi makanan padat kalori dan bernutrisi seperti nasi, kentang, ayam, telur, ikan berlemak, kacang-kacangan, dan alpukat, serta makan 5-6 kali sehari dengan tambahan bahan seperti keju atau selai kacang.');
@@ -117,7 +117,7 @@ begin
     write('Apakah Anda Ingin Menghitung Lagi? (y/n): ');
     readln(lanjut);
     lanjut := upcase(lanjut);
-    until (lanjut = 'N');
+    until (lanjut = 'N'); //jika pengguna ingin menghitung lagi
     clrscr;
     writeln('Terima Kasih Sudah Menggunakan Program Ini!!');
 end.
