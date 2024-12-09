@@ -71,3 +71,6 @@ begin
                     writeln('Jenis Kelamin Tidak Valid');
                 until (jeniskelamin = 'pria') or (jeniskelamin = 'Pria') or (jeniskelamin = 'wanita') or (jeniskelamin = 'Wanita');
             end;
+
+            hitungbmi(banyakorang[i]);
+            hitungideal(banyakorang[i]);
