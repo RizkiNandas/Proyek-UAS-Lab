@@ -53,3 +53,14 @@ begin
     writeln;
     write('Masukkan Jumlah Orang Yang Ingin Dihitung: ');
     readln(jumlahorang);
+    for i := 1 to jumlahorang do
+        begin
+            writeln('Data Orang ke ', i);
+            with banyakorang[i] do
+            begin
+                write('Masukkan Nama                      : ');
+                readln(nama);
+                write('Masukkan Berat Badan(Kg)           : ');
+                readln(berat);
+                write('Masukkan Tinggi Badan(Cm)          : ');
+                readln(tinggi);
