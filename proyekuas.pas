@@ -90,3 +90,34 @@ begin
                     writeln('Kategori berat badan       : ', kategori);
                     writeln('Berat Badan Ideal          : ', ideal:0:2);
                     
+        if kategori = 'Kekurangan Berat Badan' then
+                        begin
+                            writeln('Berikut Ini adalah Tips Untuk Menaikkan Berat Badan.');
+                            writeln('1. Konsumsi makanan padat kalori dan bernutrisi seperti nasi, kentang, ayam, telur, ikan berlemak, kacang-kacangan, dan alpukat, serta makan 5-6 kali sehari dengan tambahan bahan seperti keju atau selai kacang.');
+                            writeln('2. Kombinasikan dengan latihan kekuatan, seperti squat, deadlift, dan bench press, 3-5 kali seminggu untuk meningkatkan massa otot.');
+                            writeln('3. Pastikan tidur cukup, minum smoothie tinggi kalori, dan berikan waktu istirahat pada otot untuk pemulihan optimal.');
+                        end
+                    else if kategori = 'Berat Badan Ideal' then
+                        begin
+                            writeln('Berikut Ini Adalah Hal Yang Bisa Dilakukan Untuk Mempertahankan Berat Badan Tetap Ideal');
+                            writeln('1. Konsumsi makanan seimbang dengan porsi sesuai kebutuhan kalori harianmu, seperti karbohidrat kompleks (nasi merah, gandum), protein berkualitas (ayam, ikan, telur), lemak sehat (alpukat, kacang), serta sayur dan buah.');
+                            writeln('2. Lakukan latihan kekuatan 2-3 kali seminggu untuk menjaga massa otot, ditambah aktivitas kardio ringan seperti jogging atau bersepeda untuk kesehatan jantung.');
+                            writeln('3. Hindari makanan olahan berlebihan, tetap terhidrasi, dan tidur cukup untuk menjaga metabolisme tetap optimal.');
+                        end
+                    else
+                        begin
+                            writeln('Berikut Ini Adalah Yang Bisa Dilakukan Untuk Menurunkan Berat Badan.');
+                            writeln('1. Konsumsi makanan rendah kalori namun kaya nutrisi, seperti sayuran, buah-buahan, protein tanpa lemak (ayam, ikan, tahu), dan karbohidrat kompleks (oat, quinoa).');
+                            writeln('2. Kurangi gula dan lemak jenuh, serta pilih lemak sehat seperti alpukat atau kacang-kacangan dalam porsi kecil.');
+                            writeln('3. Lakukan latihan kardio seperti lari atau bersepeda 3-5 kali seminggu untuk membakar kalori, dan kombinasikan dengan latihan kekuatan untuk meningkatkan metabolisme.');
+                        end; 
+                end;
+            writeln;
+    end;
+    write('Apakah Anda Ingin Menghitung Lagi? (y/n): ');
+    readln(lanjut);
+    lanjut := upcase(lanjut);
+    until (lanjut = 'N');
+    clrscr;
+    writeln('Terima Kasih Sudah Menggunakan Program Ini!!');
+end.
