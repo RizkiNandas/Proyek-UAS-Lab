@@ -64,3 +64,10 @@ begin
                 readln(berat);
                 write('Masukkan Tinggi Badan(Cm)          : ');
                 readln(tinggi);
+                repeat
+                write('Masukkan Jenis Kelamin(Pria/Wanita): ');
+                readln(jeniskelamin);
+                if (jeniskelamin<>'pria') or (jeniskelamin<>'Pria') or (jeniskelamin<>'wanita') or (jeniskelamin<>'Wanita') then
+                    writeln('Jenis Kelamin Tidak Valid');
+                until (jeniskelamin = 'pria') or (jeniskelamin = 'Pria') or (jeniskelamin = 'wanita') or (jeniskelamin = 'Wanita');
+            end;
