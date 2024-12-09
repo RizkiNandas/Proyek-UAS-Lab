@@ -1,7 +1,7 @@
 program menjagaberatbadanideal;
 uses crt;
 type 
-    orang = record
+    orang = record //mengumpulkan data pengguna
     nama:string;
     tinggi:real;
     tinggibmi:real;
@@ -12,7 +12,7 @@ type
     ideal:real;
     end;
 var
-    banyakorang:array [1..10] of orang;
+    banyakorang:array [1..10] of orang; //menyimpan hingga 10 pengguna 
     jumlahorang,i:integer;
     lanjut:char;
 procedure hitungideal (var data:orang);
